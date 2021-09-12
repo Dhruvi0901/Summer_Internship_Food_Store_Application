@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@drawable/custom_color2"
+
+
+    android:orientation="vertical"
+    tools:context=".SignupActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_color2"
+            android:orientation="vertical">
+
+     <RelativeLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+            <ImageView
+    android:id="@+id/image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+            android:layout_marginStart="40dp"
+                android:src="@drawable/logo2" />
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/image"
+                android:padding="5dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                style="@style/bold_30_text"
+                android:text="Sign Up" />
+
+
+
+         </RelativeLayout>
+
+
+    <EditText
+
+        android:id="@+id/signup_name"
+        style="@style/regular_18_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_border"
+        android:hint="Enter Your Name"
+        android:backgroundTint="@color/whites"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/signup_email"
+        style="@style/regular_18_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_border"
+        android:hint="Enter Your Email Id"
+        android:backgroundTint="@color/whites"
+        android:inputType="textEmailAddress"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/signup_contact"
+        style="@style/regular_18_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_border"
+        android:backgroundTint="@color/whites"
+        android:hint="Enter Your Contact No."
+        android:inputType="number"
+        android:maxLength="10"
+        android:padding="10dp"
+        tools:ignore="HardcodedText" />
+
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_marginHorizontal="40dp"
+          android:layout_marginTop="10dp"
+          android:background="@drawable/custom_border"
+          android:backgroundTint="@color/whites"
+          android:padding="5dp"
+          android:layout_height="wrap_content">
+
+          <LinearLayout
+              android:id="@+id/password_layout"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:layout_marginLeft="10dp"
+              android:orientation="horizontal">
+
+              <ImageView
+                  android:id="@+id/signup_hide_iv"
+                  android:layout_width="20dp"
+                  android:src="@drawable/ic_resource_private"
+                  android:layout_height="20dp"/>
+
+              <ImageView
+                  android:id="@+id/signup_show_iv"
+                  android:layout_width="20dp"
+                  android:src="@drawable/ic_view"
+                  android:visibility="gone"
+                  android:layout_height="20dp"/>
+
+
+          </LinearLayout>
+
+
+    <EditText
+        android:layout_toLeftOf="@id/password_layout"
+        android:id="@+id/signup_password"
+        style="@style/regular_18_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/whites"
+        android:hint="Enter Password"
+        android:padding="5dp"
+        android:inputType="textPassword"
+        tools:ignore="HardcodedText" />
+
+      </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_border"
+                android:backgroundTint="@color/whites"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/confirm_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/signup_confirm_hide_iv"
+                    android:layout_width="20dp"
+
+                    android:src="@drawable/ic_resource_private"
+                    android:layout_height="20dp"/>
+
+                <ImageView
+                    android:id="@+id/signup_confirm_show_iv"
+                    android:layout_width="20dp"
+                    android:src="@drawable/ic_view"
+                    android:visibility="gone"
+                    android:layout_height="20dp"/>
+
+
+            </LinearLayout>
+
+
+            <EditText
+                android:layout_toStartOf="@id/confirm_layout"
+        android:id="@+id/signup_confirm_password"
+        style="@style/regular_18_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+                android:backgroundTint="@color/whites"
+        android:hint="Enter Confirm Password"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/signup_calendar"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ca" />
+
+        <EditText
+            android:id="@+id/signup_dob"
+            style="@style/regular_18_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_toStartOf="@id/signup_calendar"
+            android:background="@drawable/custom_border"
+            android:backgroundTint="@color/whites"
+            android:editable="false"
+            android:hint="Date Of Birth"
+            android:padding="10dp"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        style="@style/bold_20_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Gender"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:id="@+id/signup_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="40dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_weight="1"
+            android:text="Male"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:text="Female"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Transgender"
+            tools:ignore="HardcodedText" />
+
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            style="@style/bold_20_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/black"
+            android:text="State"
+            tools:ignore="HardcodedText" />
+
+        <Spinner
+            android:popupBackground="@color/light_gray"
+            android:popupTheme="@color/black"
+            android:id="@+id/signup_State"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/whites"/>
+
+    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    style="@style/bold_20_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_marginStart="30dp"
+                    android:textColor="@color/black"
+                    android:text="City"
+                    tools:ignore="HardcodedText" />
+
+                <Spinner
+                    style="@style/text_style"
+                    android:popupBackground="@color/light_gray"
+                    android:background="@color/whites"
+                    android:id="@+id/signup_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/signup_login"
+            style="@style/regular_18_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/custom_button"
+            android:text="Register"
+            app:backgroundTint="@null"
+            tools:ignore="HardcodedText" />
+
+
+
+</LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

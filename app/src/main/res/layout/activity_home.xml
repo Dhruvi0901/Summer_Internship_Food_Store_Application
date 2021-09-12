@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/custom_color2"
+    tools:context=".HomeActivity">
+
+    <androidx.appcompat.widget.SearchView
+       android:id="@+id/home_search"
+       app:defaultQueryHint="Search Category/Product"
+       app:queryHint="Search Category/Product"
+       android:background="@drawable/custom_border"
+       android:layout_marginVertical="10dp"
+       android:layout_marginHorizontal="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+ <!--<EditText
+  android:gravity="center"
+     android:textColorHint="@color/black"
+        android:id="@+id/home_search"
+     android:textColor="@color/black"
+        android:hint="@string/search_category_product"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:padding="10dp"
+        android:background="@drawable/custom_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>-->
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light1"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"/>
+
+        <ImageView
+            android:id="@+id/toolbar_drawer"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/ic_menu_of_three_lines"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FoodStuff"
+            android:layout_toRightOf="@+id/toolbar_drawer"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:textColor="@color/whites"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"/>
+
+        <ImageView
+            android:id="@+id/toolbar_noti"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toLeftOf="@id/toolbar_cart"
+            app:srcCompat="@drawable/ic_bell"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="45dp"/>
+
+        <ImageView
+            android:id="@+id/toolbar_cart"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/ic_shopping_bag"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"/>
+    </RelativeLayout>-->
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+   <!-- <ImageView
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/search_img"
+        android:layout_width="18dp"
+        android:src="@drawable/ic_loupe"
+        android:layout_height="18dp"/>-->
+
+  <!--  <AutoCompleteTextView
+        android:gravity="center"
+        android:layout_marginRight="40dp"
+        android:textColor="@color/black"
+        android:id="@+id/home_search"
+        android:textColorHint="@color/black"
+        android:hint="Search Category/Product and more"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginLeft="10dp"
+        android:padding="10dp"
+        style="@style/regular_18_text2"
+        android:background="@drawable/custom_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>-->
+
+  </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Product"
+        style="@style/bold_20_text1"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/category"
+        style="@style/bold_20_text1"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
